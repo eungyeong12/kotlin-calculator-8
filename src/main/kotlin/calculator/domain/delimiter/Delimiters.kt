@@ -19,7 +19,7 @@ class Delimiters {
         }
 
         fun of(customDelimiter: Char): Delimiters {
-            val delimiters = Delimiters()
+            val delimiters = default()
             delimiters.addCustomDelimiter(customDelimiter)
             return delimiters
         }
