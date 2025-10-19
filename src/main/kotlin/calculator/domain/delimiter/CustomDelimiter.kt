@@ -2,7 +2,7 @@ package calculator.domain.delimiter
 
 import calculator.constant.Constants.CUSTOM_DELIMITER_INDEX
 
-class CustomDelimiter(
+class CustomDelimiter private constructor(
     private val delimiter: Char
 ) {
     fun getCustomDelimiter(): Char {

@@ -2,7 +2,7 @@ package calculator.domain.delimiter
 
 import calculator.constant.Constants
 
-class Delimiters {
+class Delimiters private constructor() {
     private val delimiters: MutableSet<Char> = mutableSetOf(Constants.COMMA, Constants.COLON)
 
     fun getDelimiters(): Set<Char> {
