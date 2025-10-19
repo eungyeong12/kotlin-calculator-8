@@ -1,11 +1,14 @@
 package calculator.controller
 
+import calculator.view.InputView
 import calculator.view.OutputView
 
-class StringAdditionCalculator(
+class StringAdditionCalculatorController(
+    private val inputView: InputView,
     private val outputView: OutputView
 ) {
     fun run() {
         outputView.displayCalculatorStartMessage()
+        inputView.readInput()
     }
 }
