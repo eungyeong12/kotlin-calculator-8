@@ -1,6 +1,7 @@
 package calculator.config
 
 import calculator.controller.StringAdditionCalculatorController
+import calculator.service.calculator.CalculatorService
 import calculator.service.delimiter.DelimiterService
 import calculator.service.number.NumberService
 import calculator.view.InputView
@@ -12,6 +13,7 @@ class ApplicationConfig {
             InputView(),
             OutputView(),
             DelimiterService(),
-            NumberService()
+            NumberService(),
+            CalculatorService()
         )
 }
