@@ -14,7 +14,7 @@ class CustomDelimiterTest {
     @MethodSource("provideInputAndResult")
     @DisplayName("커스텀 구분자를 성공적으로 추출한다")
     fun testExtractCustomDelimiter(input: String, expected: Char) {
-        val actual = CustomDelimiter.of(input).getCustomDelimiter()
+        val actual = CustomDelimiter.from(input).getCustomDelimiter()
         assertEquals(expected, actual)
     }
 

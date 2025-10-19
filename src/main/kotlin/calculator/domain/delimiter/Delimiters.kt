@@ -14,6 +14,10 @@ class Delimiters {
     }
 
     companion object {
+        fun default(): Delimiters {
+            return Delimiters()
+        }
+
         fun of(customDelimiter: Char): Delimiters {
             val delimiters = Delimiters()
             delimiters.addCustomDelimiter(customDelimiter)

@@ -10,7 +10,7 @@ class CustomDelimiter(
     }
 
     companion object {
-        fun of(input: String): CustomDelimiter {
+        fun from(input: String): CustomDelimiter {
             val delimiter = input[CUSTOM_DELIMITER_INDEX]
             return CustomDelimiter(delimiter)
         }

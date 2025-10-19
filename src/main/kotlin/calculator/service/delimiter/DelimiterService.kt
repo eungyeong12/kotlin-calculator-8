@@ -7,9 +7,9 @@ import calculator.util.Util.isExistCustomDelimiter
 class DelimiterService {
     fun getDelimiters(input: String): Delimiters {
         if (isExistCustomDelimiter(input)) {
-            val customDelimiter = CustomDelimiter.of(input)
+            val customDelimiter = CustomDelimiter.from(input)
             return Delimiters.of(customDelimiter.getCustomDelimiter())
         }
-        return Delimiters()
+        return Delimiters.default()
     }
 }
