@@ -1,0 +1,18 @@
+package calculator.domain.delimiter
+
+import calculator.constant.Constants.CUSTOM_DELIMITER_INDEX
+
+class CustomDelimiter(
+    private val delimiter: Char
+) {
+    fun getCustomDelimiter(): Char {
+        return delimiter
+    }
+
+    companion object {
+        fun of(input: String): CustomDelimiter {
+            val delimiter = input[CUSTOM_DELIMITER_INDEX]
+            return CustomDelimiter(delimiter)
+        }
+    }
+}
