@@ -1,9 +1,10 @@
 package calculator.config
 
-import calculator.controller.StringAdditionCalculator
+import calculator.controller.StringAdditionCalculatorController
+import calculator.view.InputView
 import calculator.view.OutputView
 
 class ApplicationConfig {
-    fun stringAdditionCalculator(): StringAdditionCalculator =
-        StringAdditionCalculator(OutputView())
+    fun stringAdditionCalculatorController(): StringAdditionCalculatorController =
+        StringAdditionCalculatorController(InputView(), OutputView())
 }
