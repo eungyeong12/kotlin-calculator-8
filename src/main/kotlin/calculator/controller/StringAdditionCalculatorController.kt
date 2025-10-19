@@ -19,6 +19,8 @@ class StringAdditionCalculatorController(
 
         val delimiters = delimiterService.getDelimiters(input)
         val numbers = numberService.getNumbers(input, delimiters)
-        calculatorService.calculate(numbers)
+        val sum = calculatorService.calculate(numbers)
+
+        outputView.displayCalculateResult(sum)
     }
 }
