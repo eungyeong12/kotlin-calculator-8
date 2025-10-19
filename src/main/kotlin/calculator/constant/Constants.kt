@@ -5,6 +5,6 @@ object Constants {
     const val ZERO = "0"
     const val COMMA = ','
     const val COLON = ':'
-    const val CUSTOM_DELIMITER_SETTING_REGEX = "^//.\\n$"
+    const val CUSTOM_DELIMITER_SETTING_REGEX = "^//.\\\\n"
     const val CUSTOM_DELIMITER_INDEX = 2
 }
