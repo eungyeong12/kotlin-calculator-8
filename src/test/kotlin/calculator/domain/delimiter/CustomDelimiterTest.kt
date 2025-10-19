@@ -1,7 +1,6 @@
-package calculator.domain
+package calculator.domain.delimiter
 
-import calculator.domain.delimiter.CustomDelimiter
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -15,7 +14,7 @@ class CustomDelimiterTest {
     @DisplayName("커스텀 구분자를 성공적으로 추출한다")
     fun testExtractCustomDelimiter(input: String, expected: Char) {
         val actual = CustomDelimiter.from(input).getCustomDelimiter()
-        assertEquals(expected, actual)
+        Assertions.assertEquals(expected, actual)
     }
 
     companion object {

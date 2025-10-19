@@ -1,7 +1,6 @@
-package calculator.service
+package calculator.service.delimiter
 
-import calculator.service.delimiter.DelimiterService
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -23,7 +22,7 @@ class DelimiterServiceTest {
         val actual = delimiters.getDelimiters()
 
         // then
-        assertEquals(expected, actual.size)
+        Assertions.assertEquals(expected, actual.size)
     }
 
     companion object {
