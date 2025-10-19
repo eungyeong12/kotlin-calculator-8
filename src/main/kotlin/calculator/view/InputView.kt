@@ -5,10 +5,10 @@ import camp.nextstep.edu.missionutils.Console
 
 class InputView {
     fun readInput(): String {
-        val input = Console.readLine().trim()
-        if (input.isEmpty()) {
-            return ZERO
+        return try {
+            Console.readLine().trim()
+        } catch (_: Exception) {
+            ZERO
         }
-        return input
     }
 }
