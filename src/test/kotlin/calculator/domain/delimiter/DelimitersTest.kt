@@ -26,7 +26,7 @@ class DelimitersTest {
         Assertions.assertEquals(2, actual.size)
     }
 
-    @ParameterizedTest(name = "입력: ''{0}'', 결과: {1}")
+    @ParameterizedTest(name = "입력: {0}, 결과: {1}")
     @MethodSource("provideUniqueCustomDelimiter")
     @DisplayName("of(custom)는 기본 구분자와 커스텀 구분자를 포함한다.")
     fun testOfAddsCustom(delimiter: Char, expected: Char) {
@@ -35,7 +35,7 @@ class DelimitersTest {
         Assertions.assertEquals(3, actual.size)
     }
 
-    @ParameterizedTest(name = "입력: ''{0}'', 결과: {1}")
+    @ParameterizedTest(name = "입력: {0}, 결과: {1}")
     @MethodSource("provideDefaultDelimiter")
     @DisplayName("커스텀 구분자가 기본 구분자와 동일해도 중복 없이 유지된다")
     fun testDuplicateCustomIsIgnored(delimiter: Char, expected: Int) {

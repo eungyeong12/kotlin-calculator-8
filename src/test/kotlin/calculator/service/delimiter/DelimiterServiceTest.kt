@@ -11,7 +11,7 @@ class DelimiterServiceTest {
 
     private val delimiterService = DelimiterService()
 
-    @ParameterizedTest(name = "입력: ''{0}'', 결과: {1}")
+    @ParameterizedTest(name = "입력: {0}, 결과: {1}")
     @MethodSource("provideInputAndResult")
     @DisplayName("입력값에 대해 올바른 구분자 리스트를 반환한다")
     fun testReturnsCorrectDelimiters(input: String, expected: Int) {

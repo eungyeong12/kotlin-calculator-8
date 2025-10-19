@@ -9,7 +9,7 @@ import java.util.stream.Stream
 
 class CustomDelimiterTest {
 
-    @ParameterizedTest(name = "입력: ''{0}'', 결과: {1}")
+    @ParameterizedTest(name = "입력: {0}, 결과: {1}")
     @MethodSource("provideInputAndResult")
     @DisplayName("커스텀 구분자를 성공적으로 추출한다")
     fun testExtractCustomDelimiter(input: String, expected: Char) {
