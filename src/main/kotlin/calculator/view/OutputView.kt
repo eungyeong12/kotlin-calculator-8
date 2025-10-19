@@ -1,6 +1,6 @@
 package calculator.view
 
-import calculator.constant.CALCULATOR_START_MESSAGE
+import calculator.constant.Constants.CALCULATOR_START_MESSAGE
 
 class OutputView {
     fun displayCalculatorStartMessage() {
