@@ -10,6 +10,6 @@ class DelimiterService {
             val customDelimiter = CustomDelimiter.from(input)
             return Delimiters.of(customDelimiter.getCustomDelimiter())
         }
-        return Delimiters.default()
+        return Delimiters.create()
     }
 }

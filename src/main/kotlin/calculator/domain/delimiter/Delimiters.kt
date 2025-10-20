@@ -14,12 +14,12 @@ class Delimiters private constructor() {
     }
 
     companion object {
-        fun default(): Delimiters {
+        fun create(): Delimiters {
             return Delimiters()
         }
 
         fun of(customDelimiter: Char): Delimiters {
-            val delimiters = default()
+            val delimiters = create()
             delimiters.addCustomDelimiter(customDelimiter)
             return delimiters
         }

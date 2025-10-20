@@ -15,7 +15,7 @@ class DelimitersTest {
     @DisplayName("기본 생성자는 기본 구분자(, :)를 가진다")
     fun testDefaultHasCommaAndColon() {
         // given
-        val delimiters = Delimiters.default()
+        val delimiters = Delimiters.create()
 
         // when
         val actual = delimiters.getDelimiters()
