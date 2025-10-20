@@ -7,4 +7,5 @@ object Constants {
     const val COLON = ':'
     const val CUSTOM_DELIMITER_SETTING_REGEX = "^//.\\\\n"
     const val CUSTOM_DELIMITER_INDEX = 2
+    const val CALCULATOR_RESULT_MESSAGE = "결과 :"
 }
