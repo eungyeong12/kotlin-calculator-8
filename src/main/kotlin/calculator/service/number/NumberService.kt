@@ -20,7 +20,7 @@ class NumberService {
     }
 
     private fun splitByDelimiters(data: String, delimiters: Delimiters): List<String> {
-        return data.split(Regex("[${delimiters.getDelimiters().joinToString()}]"))
+        return data.split(Regex("[${delimiters.getDelimiters().joinToString("")}]"))
             .filter { it.isNotBlank() }
     }
 }
