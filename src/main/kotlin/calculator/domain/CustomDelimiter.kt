@@ -1,5 +1,7 @@
 package calculator.domain
 
+import calculator.constant.Constants.delimiterRegex
+
 @JvmInline
 value class CustomDelimiter private constructor(
     val value: Char?
@@ -11,8 +13,7 @@ value class CustomDelimiter private constructor(
         }
 
         private fun extractCustomDelimiter(input: String): Char? {
-            val regex = Regex("""^//(.)\\n""")
-            val matchResult = regex.find(input)
+            val matchResult = delimiterRegex.find(input)
             if (matchResult != null) {
                 return matchResult.groupValues[1].first()
             }
