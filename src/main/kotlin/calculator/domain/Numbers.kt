@@ -22,7 +22,8 @@ class Numbers private constructor(
         }
 
         private fun splitByDelimiters(input: String, delimiters: Delimiters): List<String> {
-            return input.split(*delimiters.delimiters.toCharArray())
+            return input.split(*delimiters.toCharArray())
+                .filter { it.isNotBlank() }
         }
 
         private fun toNumbers(tokens: List<String>): List<Int> {
