@@ -1,11 +1,13 @@
 package calculator.controller
 
+import calculator.domain.Delimiters
 import calculator.view.InputView
 import calculator.view.OutputView
 
 class CalculatorController {
     fun run() {
         OutputView.displayInputPrompt()
-        InputView.readInput()
+        val input = InputView.readInput()
+        Delimiters.from(input)
     }
 }
