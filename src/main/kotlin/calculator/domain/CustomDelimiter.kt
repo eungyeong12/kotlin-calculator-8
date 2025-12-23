@@ -13,11 +13,7 @@ value class CustomDelimiter private constructor(
         }
 
         private fun extractCustomDelimiter(input: String): Char? {
-            val matchResult = delimiterRegex.find(input)
-            if (matchResult != null) {
-                return matchResult.groupValues[1].first()
-            }
-            return null
+            return delimiterRegex.find(input)?.groupValues[1]?.firstOrNull()
         }
     }
 }
