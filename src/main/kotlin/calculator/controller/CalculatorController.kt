@@ -1,5 +1,6 @@
 package calculator.controller
 
+import calculator.domain.Calculator
 import calculator.domain.Delimiters
 import calculator.domain.Numbers
 import calculator.view.InputView
@@ -10,6 +11,8 @@ class CalculatorController {
         OutputView.displayInputPrompt()
         val input = InputView.readInput()
         val delimiters = Delimiters.from(input)
-        Numbers.from(input, delimiters)
+        val numbers = Numbers.from(input, delimiters)
+        val calculator = Calculator(numbers)
+        OutputView.displayResult(calculator.sum())
     }
 }
