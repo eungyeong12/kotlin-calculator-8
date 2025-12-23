@@ -3,6 +3,10 @@ package calculator.domain
 class Delimiters private constructor(
     val delimiters: Set<Char>
 ) {
+    fun toCharArray(): CharArray {
+        return delimiters.toCharArray()
+    }
+
     companion object {
         private val DEFAULT_DELIMITERS: Set<Char> = setOf(',', ':')
 
