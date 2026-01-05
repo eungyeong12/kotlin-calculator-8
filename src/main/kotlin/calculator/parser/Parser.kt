@@ -1,0 +1,17 @@
+package calculator.parser
+
+import calculator.exception.ErrorMessage
+
+object Parser {
+
+    fun parseToNumber(input: String, errorMessage: String = ErrorMessage.INVALID_INPUT.errorMessage): Int {
+        val number = input.toIntOrNull()
+        requireNotNull(number) { errorMessage }
+        return number
+    }
+
+    fun splitByDelimiter(input: String, delimiter: Char): List<String> {
+        return input.split(delimiter)
+            .map { it.trim() }
+    }
+}
